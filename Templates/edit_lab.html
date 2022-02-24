@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Edit Lab</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-center">
+                <h4>Edit Lab</h4>
+                <ul class="nav-links">
+                    <li><a href="/view_labs/">View</a></li>
+                    <li><a href="/create_lab/">Create</a></li>
+                    <li><a href="/delete_lab/">Delete</a></li>
+                    <li><a href="/account_settings/">Account</a></li>
+                    <li><a href="/home/">Dashboard</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <form class="form-control" action="/edit_lab/" method="post">
+                    {% csrf_token %}
+                    <table border="1">
+                        <tr>
+                            <th STYLE="padding:5px 10px;">ID</th>
+                            <th STYLE="padding:5px 10px;">Course</th>
+                            <th STYLE="padding:5px 10px;">Name</th>
+                            <th STYLE="padding:5px 10px;">Location</th>
+                            <th STYLE="padding:5px 10px;">Hours</th>
+                            <th STYLE="padding:5px 10px;">Days</th>
+                            <th STYLE="padding:5px 10px;">TA</th>
+                        </tr>
+                        {% for Lab in object_list %}
+                            <tr>
+                                {% if change_lab.labID == Lab.labID %}
+                                    <td>{{ Lab.labID }}</td>
+                                    <td>
+                                        <label for="course"></label>
+                                        <select name="course" id="course">
+                                            {% for Course in Course_list %}
+                                                <option value="{{ Course.courseID }}" {% if Lab in Course.lab_set.all %} selected {% endif %}>{{ Course.name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td><label for=name></label><input type="text" id=name name=name value="{{ Lab.name }}"></td>
+                                    <td><label for=location></label><input type="text" id=location name=location value="{{ Lab.location }}"></td>
+                                    <td><label for=hours></label><input type="text" id=hours name=hours value="{{ Lab.hours }}"></td>
+                                    <td>
+                                        <label for="days"></label>
+                                        <select multiple name="days" id="days">
+                                            <option value="M" {% if "M" in Lab.getDays %} selected {% endif %}>Monday</option>
+                                            <option value="T" {% if "T" in Lab.getDays %} selected {% endif %}>Tuesday</option>
+                                            <option value="W" {% if "W" in Lab.getDays %} selected {% endif %}>Wednesday</option>
+                                            <option value="Th" {% if "Th" in Lab.getDays %} selected {% endif %}>Thursday</option>
+                                            <option value="F" {% if "F" in Lab.getDays %} selected {% endif %}>Friday</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="TA"></label>
+                                        <select name="TA" id="TA">
+                                            {% for UserProfile in UserProfile_list %}
+                                                {% if UserProfile.userType == "TA" %}
+                                                    <option value="{{ UserProfile.userID }}" {% if Lab in UserProfile.TAToLab.all %} selected {% endif %}>{{ UserProfile.username }}</option>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <button 
+                                        STYLE="background-color: #008000;color: #FFFFFF; 
+                                        font-weight: 700;font-size:14px;
+                                    padding: 5px 10px;"                      
+                                        name="submit" type="submit" value="{{ Lab.labID }}">Submit</button>
+                                    </td>
+                                {% else %}
+                                    <td STYLE="padding:5px 10px;">{{ Lab.labID }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.course }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.name }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.location }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.hours }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.days }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Lab.TA }}</td>
+                                    {% if change_lab.labID == null %}
+                                        <td>
+                                            <button 
+                                            STYLE="background-color: #000000;color: #FFFFFF; 
+                                            font-weight: 700;font-size:14px;
+                                        padding: 5px 10px;" 
+                                            name="edit" type="submit" value="{{ Lab.labID }}">Edit</button>
+                                        </td>
+                                    {% endif %}
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </form>
+                {{ error }}
+            </div>
+        </main>
+    </body>
+</html>

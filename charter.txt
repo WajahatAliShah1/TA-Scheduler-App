@@ -1,0 +1,215 @@
+	Group Charter: Innovation Express
+
+	Group Contact Info:
+
+		Broderick Hebert: E-mail - BMHebert@uwm.edu, GitHub Username - BMHebert
+		Samuel Bruggink: E-mail - Bruggin9@uwm.edu, GitHub Username - Bruggin9
+		Corey Golumski: E-mail - golumski@uwm.edu, GitHub Username - cogii
+		Yazan Salem: E-mail - ysalem@uwm.edu, GitHub Username - yazansalem
+		Rein Tael: E-mail - reintael@uwm.edu, GitHub Username - rvtael
+		Wajahat Ali Shah: E-mail - walishah@uwm.edu, GitHub Username - WajahatAliShah1
+
+	Meeting Times: Monday and Wednesday at 6:45 PM, Friday 11:00Am
+
+
+	Goals:
+
+1: To work together as a team by respecting, collaborating, with each other to develop a product that is functional and able to be presentable for the final exam.
+
+
+2: To become aware of the knowledge and concepts that will be important when looking to become a software engineer. As well as using concepts such as using GitHub,
+Python, Django and other concepts that were covered in class.
+
+
+3: To gain an experience of working together in a group while using Agile principles that may translate over to a professional experience. Providing an experience
+like this can help future success at a potential job or professional experience.
+
+
+	Work Norms: 
+
+1. Time Commitment:
+
+The goal for each member should be to complete the task that they are assigned, it would be very difficult to assign a specfic time to each task that has to be done.
+Therefore, If that individual spends adequate time on a task and is struggling, it is that individuals responsiblity to reach out to other group members and seek
+guidance on what they are struggling on. If there is a group member that is struggling to complete their task, it is the groups job to pivot and provide help or
+determine whether that individual’s workload should be decreased.
+
+
+2. Quality Work:
+
+The goal for each member should be to produce quality code that accomplishes the task that the individual is assigned to do. If that individual doesn’t reach out
+for help or produce a quality product, then the procedures for dealing with that individual are in the ground rules.
+
+
+	Meeting Ground Rules:
+
+1: Meetings will be normally scheduled at 6:45 PM on Monday, Wednesday, and Friday. All members are expected to attend each meeting unless there is a scheduling conflict.
+If there is a conflict the group member should inform the group twenty four hours in advance. Given that there is only six weeks left in the semester, scheduling conflicts
+should be kept to an absolute minimum. If the meeting schedule needs to change it will be discussed and agreed to as a group.
+
+2: Meeting time is valuable and therefore everyone should be on time, mentally present, and engaged. This means there should be no outside work brought to the meetings,
+and phones should only be used to inform people outside the group that the member is currently engaged. Emergencies that require immediate attention are acceptable,
+however if they become a problem the issues will be discussed as a group and a collective decision will be arrived at as to how to proceed. If a member violates these norms
+repeatedly it will be dealt with as outlined in the disciplinary section below.
+
+3: The meetings will take place over Microsoft Teams. 
+Each meeting will follow the Scrum framework.
+At every meeting the group will address what each member has accomplished, what each member plans to accomplish before the next meeting, and the challenges each member is facing. 
+Meetings should be as long as needed to keep every group member informed, and no longer. 
+Meeting length will vary with the needs of the project but should be kept to less than an hour. 
+If more time is needed for individual members, they should schedule time to work together outside of regular meeting time.  
+
+
+	Group communication and interaction:  
+ 
+1. Regular communication: 
+
+Regular communication should occur through email, Teams, or Discord. This communication should include a simple update on one's progress of their portion of the project. When a 
+member finishes their portion of the project, they should create a pull request in GitHub. If a member forgets to post progress, any member can send an inquiry email to the person
+who forgot. If the email is not responded to in 24 hours, the group will begin to take on that member‟s responsibilities. If the member has a good reason for not responding, it
+will be taken into consideration as to whether there will be disciplinary action; otherwise it will be an immediate minor offense. If however, the member responds within the 24
+hour time period stating they forgot, no disciplinary action will be taken. If a member is having problems with their portion of the work, they should let the rest of the group knew
+immediately so they can received any needed help as soon as possible.
+
+2. Timely Responses:
+
+Teams messages should be responded to within 4 - 5 hours given that they are sent within reasonable hours. When extenuating circumstances prevent it, exceptions can be made. Everyone should also download the Teams app onto their phone so that messages are more likely to reach them in a timely fashion.
+
+
+3. Group communication on tardiness/missed meetings and meeting information:
+
+If a member has prior knowledge of a missed meeting or tardiness of a day or more, that member should notify all members and decide wether it will be best to reschedule meeting.
+If it is the day of the meeting and a group member is going to miss the meeting or knows they are going to be tardy by more than five minutes, that member shall send a Teams message
+to all group members informing them of the situation. Failure to do so more than once will result in a minor offense.  
+
+
+4. Communication ethics:
+
+There shall be an understanding among group members that all opinions or input by any individual member is valued and will be respected, even if disagreed with. People and/or their
+opinions shall not in any way be degraded or dismissed but all opinions shall have equal consideration. If a member feels his opinions are being rejected without good reason, he has
+a right to bring it up to the group leader and/or the group. The group will then discuss the situation and either reconsider their opinions, or make a case as to why the members
+opinions are not being used. If this situation happens more than three times the member has a right to go to the TA and state their case. If the problem is not solved by the TA, the
+opportunity is then open to state their case to Rock. 
+
+
+5. Group structure:
+
+These following roles are here to help the group be more efficient: 
+
+Leader – This role belongs to the group leader. This jedi master is responsible for the flow of the meeting and has a helpful role in the delegation of responsibilities. 
+
+Note Taker – This role belongs to the meeting note taker. This person is responsible to take notes at all the meetings and to relay the important information and any decisions made 
+during the meeting to the other members via email or Teams by the end of the next day. 
+
+Disciplinary Note Taker -They will be responsible for recording any disciplinary actions taken toward any member of the group. 
+
+Agenda Maker – This role belongs to the agenda maker. This member is responsible for making an agenda of subjects which need to be covered in the upcoming meeting. Will contact
+members when an immediate meeting needs to happen. 
+
+If any member in a role does not follow through with his responsibilities on multiple occasions or if for some reason a member is not able to perform their duties, they shall be 
+replaced by group decision.  
+
+
+6. Decision making:
+
+Any decisions which need to be made about the project, project direction or disciplinary action will be made by a majority vote. Any decisions about delegation will be covered in 
+part six. Members are expected to vote within 24 hours.
+
+
+7. Group decisions on delegation: 
+
+The delegation of responsibilities to group members will be decided in the following fashion. The responsibilities will be discussed and decided on as a group decision. Then each
+group member has the opportunity to volunteer for the task he may want. If a group member does not volunteer for a task, they will be assigned one by the leader. If a group member
+feels the portion of responsibility is unfair, they may voice their concern and state a reason why. If a majority of the group feels this member is correct, the responsibilities
+will be reformed and the delegation process will start again. However, if a team member wants to take a larger role, they can also voice their opinion and group members will decide
+wether the work is reasonable to complete in a specific time frame.   
+
+
+	Group participation and work quality:
+
+1. Group participation: 
+
+Given a group members participation of work, they may be asked to share more of their workload or less based on the situation. Everyone should be cognizant of meetings, along with
+actively helping the flow of meetings. If someone is asked to share what is on their mind or asked to give others a chance to speak but do not, and their participation in a
+conversation is blocking the flow of a meeting, then it could be considered as an infraction.
+
+
+2. Work not up to standard: 
+
+There is a standard that we should all uphold if we want to succeed. We should strive for quality of work, timeliness of work, and respect for our fellow groupmembers. Everyone gets
+inundated with work on occasion and it’s understandable that at periods, someone may not be able to give their full effort given what we agreed upon. If this happens, said group member
+who is having issues must keep in contact with the rest of the group so the task can be redistributed, using what our group established in decisions and delegation. Hopefully this will
+help the group continue functioning efficiently. If the individual is consistently having issues with following our group standard, it could be considered be considered a major offense.
+
+
+3. Group members unprepared: 
+
+Everyone has their own life and schedule, filled with things they must do. If the group visibly notices a member is under-prepared, or not prepared at all consistently, then it may be
+considered a minor offense.
+
+
+4. Workload too heavy: 
+
+If the time restraints or lack of individuals working to complete a task is not sufficient, we as a group will work on an e-mail to send to Jayson (or in person if we can be on campus)
+which logs the details of the amount of work to be done, the status of how far we are as a group, and the reasoning as to why we can’t complete it in the given time period.
+
+
+	Disciplinary Procedures
+
+1: If the group collectively agrees to waive any disciplinary action as outlined in this document, they can do so via means of a majority vote. If the group votes on this,
+every member apart from the offending party must be present.
+
+
+2: A disciplinary log will be kept to keep track of any offenses commited by group members. This log will be primarily the responsibility of one group member, but everyone
+should have permission to edit as long as the edits are reviewed by group members.
+
+
+3: A minor offense will be considered anything that is in violotion of the group policies outlined in this charter in what the group considers a minor fashion. 
+Minor offenses must be logged, ensuring to note down what the offense entailed and when it was commited. A minor offense shall result in notification of the 
+offense to the group member that will act as a warning. If the behavior does not change, a minor offense may be upgraded to a higher level.
+
+
+4: A major offense will be considered anything that is in violation of the group policies outlined in this charter in what the group considers a major fashion,
+or if a group member accrues three minor offenses. After a major offense, the group member will be considered to be on probation, which they will be alerted about
+via a detailed email. A group member on probation cannot participate in a majority vote as outlined in the first point of this section and any further offenses, 
+be they major or minor, they may become a candidate forformal punishment or even perhaps dismissal. A member's probation status can be ended upon a majority vote
+as outlined in the first point in this section.
+
+
+5: When someone becomes a candidate for punishment or dismissal, a detailed list of offenses leading up to the group's decision will be sent to the TA and Professor Rock,
+along with messages from at least two other group members outlining their personal experience with the person in question. At that point, if the TA and Professor Rock deem
+that the group member is to be removed, all of the member's contributions will be taken and their remaining work distributed among the rest of the group members.
+
+	Clearly Defined Offense List
+	
+Minor offenses:
+Missing a meeting
+Low to no participation in a group meeting
+Not responding to a message within 4 - 5 hours (unless there is an extrenuating circumstance)
+
+
+Major Offenses:
+Missing A Lab
+Not completing the work assigned to you, in particular with no communication that you're having issues with the given work
+Being abrasive in general or disrespectful to the group or a member of the group with either spoken or text communcation
+
+
+We, the team named Innovation Express agree with the Group Charter and will try our best to uphold it. 
+
+
+Name: Broderick Hebert                       Date: 11/16/2021 
+
+
+Name: Samuel Bruggink  			     Date: 11/17/2021 
+
+
+Name: Corey Christopher Golumski             Date: 11/17/2021 
+
+
+Name: Yazan Salem			     Date: 11/17/2021
+
+
+Name: Rein Tael				     Date: 11/23/2021
+
+
+Name: Wajahat Ali Shah			     Date: 11/23/2021

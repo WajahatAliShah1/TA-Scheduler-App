@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Create Course</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-center">
+                <h4>Create Course</h4>
+                <ul class="nav-links">
+                    <li><a href="/view_courses/">View</a></li>
+                    <li><a href="/edit_course/">Edit</a></li>
+                    <li><a href="/delete_course/">Delete</a></li>
+                    <li><a href="/account_settings/">Account</a></li>
+                    <li><a href="/home/">Dashboard</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <form class="form-control" action="/create_course/" method="post">
+                    {% csrf_token %}
+                    <ul>
+                        <li>
+                            <label class="label-control" for="ID">Course Id</label>
+                            <input type="number" id="ID" name="ID">
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="name">Course Name</label>
+                            <input type="text" id="name" name="name">
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="location">Location</label>
+                            <input type="text" id="location" name="location">
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="hours">Hours of Course</label>
+                            <input type="text" id="hours" name="hours">
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="days">Days of Course</label>
+                                <select multiple name="days" id="days">
+                                    <option value="M">Monday</option>
+                                    <option value="T">Tuesday</option>
+                                    <option value="W">Wednesday</option>
+                                    <option value="Th">Thursday</option>
+                                    <option value="F">Friday</option>
+                                </select>
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="instructor">Instructor</label>
+                            <select name="instructor" id="instructor">
+                                {% for UserProfile in UserProfile_list %}
+                                    {% if UserProfile.userType == "INSTRUCTOR" %}
+                                        <option value={{ UserProfile.userID }}>{{ UserProfile.username }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </li>
+                        <br>
+
+                        <li>
+                            <label class="label-control" for="TAs">Teacher Assistants</label>
+                            <select multiple name="TAs" id="TAs">
+                                {% for UserProfile in UserProfile_list %}
+                                    {% if UserProfile.userType == "TA" %}
+                                        <option value={{ UserProfile.userID }}>{{ UserProfile.username }}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </li>
+                        <li>
+                            {% if error %}
+                                {{ error }}
+                            {% endif %}
+                        </li>
+                        <br>
+                        <button class="btn btn-hero" id="btn">Create Course</button>
+                    </ul>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

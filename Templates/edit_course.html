@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            h4 {
+                text-align: center;
+            }
+        </style>
+        <title> Edit Course</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-center">
+                <h4>Edit Course</h4>
+                <ul class="nav-links">
+                    <li><a href="/view_courses/">View</a></li>
+                    <li><a href="/create_course/">Create</a></li>
+                    <li><a href="/delete_course/">Delete</a></li>
+                    <li><a href="/account_settings/">Account</a></li>
+                    <li><a href="/home/">Dashboard</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <form class="form-control" action="/edit_course/" method="post">
+                    {% csrf_token %}
+                    <table border>
+                        <tr>
+                            <th STYLE="padding:5px 10px;">ID</th>
+                            <th STYLE="padding:5px 10px;">Name</th>
+                            <th STYLE="padding:5px 10px;">Location</th>
+                            <th STYLE="padding:5px 10px;">Hours</th>
+                            <th STYLE="padding:5px 10px;">Days</th>
+                            <th STYLE="padding:5px 10px;">Instructor</th>
+                            <th STYLE="padding:5px 10px;">TAs</th>
+                        </tr>
+                        {% for Course in Course_list %}
+                            <tr>
+                                {% if change_course.courseID  == Course.courseID %}
+                                    <td>{{ Course.courseID }}</td>
+                                    <td><label for=name></label><input type="text" id=name name=name value="{{ Course.name }}">
+                                    </td>
+                                    <td><label for=location></label><input type="text" id=location name=location
+                                                                           value="{{ Course.location }}"></td>
+                                    <td><label for=hours></label><input type="text" id=hours name=hours
+                                                                        value="{{ Course.hours }}"></td>
+                                    <td>
+                                        <label for=days></label>
+                                        <select multiple name="days" id="days">
+                                            <option value="M" {% if "M" in Course.getDays %} selected {% endif %}>Monday</option>
+                                            <option value="T" {% if "T" in Course.getDays %} selected {% endif %}>Tuesday</option>
+                                            <option value="W" {% if "W" in Course.getDays %} selected {% endif %}>Wednesday</option>
+                                            <option value="Th" {% if "Th" in Course.getDays %} selected {% endif %}>Thursday</option>
+                                            <option value="F" {% if "F" in Course.getDays %} selected {% endif %}>Friday</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <label for="instructor"></label><select name="instructor" id="instructor">
+                                        {% for UserProfile in UserProfile_list %}
+                                            {{ UserProfile.TAToCourse.all }}
+                                            {% if UserProfile.userType == "INSTRUCTOR" %}
+                                                <option value="{{ UserProfile.userID }}" {% if UserProfile.course_set.all %} selected {% endif %}> {{ UserProfile.username }} </option>
+                                            {% endif %}
+                                            {{% endfor %}
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <label for="TAs"></label><select multiple name="TAs" id="TAs">
+                                        {% for UserProfile in UserProfile_list %}
+                                            {% if UserProfile.userType == "TA" %}
+                                                <option {% if Course in UserProfile.TAToCourse.all %} selected {% endif %} value="{{ UserProfile.userID }}">{{ UserProfile.username }}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <button 
+                                        STYLE="background-color: #008000;color: #FFFFFF; 
+                                        font-weight: 700;font-size:14px;
+                                    padding: 5px 10px;" 
+                                        name="submit" type="submit" value="{{ Course.courseID }}">Submit</button>
+                                    </td>
+                                {% else %}
+
+                                    <td STYLE="padding:5px 10px;">{{ Course.courseID }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Course.name }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Course.location }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Course.hours }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Course.days }}</td>
+                                    <td STYLE="padding:5px 10px;">{{ Course.instructor }}</td>
+                                    <td STYLE="padding:5px 10px;">
+                                        <ul>
+                                            {% for i in Course.TAs.all %}
+                                                <li style="display: inline">{{ i }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    {% if change_course == null %}
+                                        <td>
+                                            <button
+                                            STYLE="background-color: #000000;color: #FFFFFF; 
+                                            font-weight: 700;font-size:14px;
+                                        padding: 5px 10px;" 
+                                            name="edit" type="submit" value="{{ Course.courseID }}">Edit</button>
+                                        </td>
+                                    {% endif %}
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <ul>
+                        <br>
+
+                        {#       <button class="btn btn-hero" id="btn">Edit Course</button>#}
+                    </ul>
+                </form>
+                {{ error }}
+            </div>
+        </main>
+    </body>
+</html>

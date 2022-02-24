@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <style>
+            h4 {
+                text-align: center;
+            }
+        </style>
+        <title>View Courses</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-center">
+                <h4>View Courses</h4>
+                <ul class="nav-links">
+                    <li><a href="/create_course/">Create</a></li>
+                    <li><a href="/edit_course/">Edit</a></li>
+                    <li><a href="/delete_course/">Delete</a></li>
+                    <li><a href="/account_settings/">Account</a></li>
+                    <li><a href="/home/">Dashboard</a></li>
+                    <li><a href="/">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                {% csrf_token %}
+                {% for course in course_list %}
+                    <b>{{ course.name }}</b>
+                    <table border>
+                        <tr>
+                            <th STYLE="padding:5px 10px;">ID</th>
+                            <th STYLE="padding:5px 10px;">Name</th>
+                            <th STYLE="padding:5px 10px;">Location</th>
+                            <th STYLE="padding:5px 10px;">Hours</th>
+                            <th STYLE="padding:5px 10px;">Days</th>
+                            <th STYLE="padding:5px 10px;">Instructor</th>
+                            <th STYLE="padding:5px 10px;">TAs</th>
+                            <th STYLE="padding:5px 10px;">Lab Sections</th>
+                        </tr>
+                        <tr>
+                            <td STYLE="padding:5px 10px;">{{ course.courseID }}</td>
+                            <td STYLE="padding:5px 10px;">{{ course.name }}</td>
+                            <td STYLE="padding:5px 10px;">{{ course.location }}</td>
+                            <td STYLE="padding:5px 10px;">{{ course.hours }}</td>
+                            <td STYLE="padding:5px 10px;">{{ course.days }}</td>
+                            <td STYLE="padding:5px 10px;">{{ course.instructor }}</td>
+                            <td STYLE="padding:5px 10px;">
+                                {% for ta in course.TAs.all %}
+                                    {{ ta.username }}
+                                {% endfor %}
+                            </td>
+                            <td STYLE="padding:5px 10px;">
+                                {% for lab in course.lab_set.all %}
+                                    {{ lab.name }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                {% endfor %}
+            </div>
+        </main>
+    </body>
+</html>
