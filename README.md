@@ -1,7 +1,7 @@
 # TA-Scheduler-App
 
 ### About the Web App:
-   This is a web application written in Python and built using the Django Framework, made by a group of 4 in our Intro to Software Engineering class. It incorporates user accounts, and makes use of the built in database to store and update information. We implemented a schedule viewing page, for every user, along with an accompanying courses/labs/account settings page as well as viewing information of other users depending on your user role. Each role has access to different permissions and pages to make certain changes, these are listed below.
+   This is a web application written in Python and built using the Django Framework. It incorporates user accounts, and makes use of the built in database to store and update information. We implemented a schedule viewing page, for every user, along with an accompanying courses/labs/account settings page as well as viewing information of other users depending on your user role. Each role has access to different permissions and pages to make certain changes, these are listed below.
 
 #### The users of the application will have 3 roles:
    #### Supervisor/Administrator (department chair)
